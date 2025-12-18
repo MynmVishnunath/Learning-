@@ -7,4 +7,15 @@ function login({name="noname",password="123455"}={}){
  }
 }
 
+function passTocken(str){
+    let tockenString;
+    for(let i=0;i<str.length;i++){
+      tockenString+=str[Math.round(Math.random()*str.length)];
+    }
+    const tocken = btoa(tockenString);
+    console.log(tocken);
+    return tocken;
+}
+
 // Main Execution
+passTocken("My Credentials");
